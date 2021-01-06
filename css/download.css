@@ -1,0 +1,326 @@
+a,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+	color: inherit;
+}
+.cp_fullscreenmenu {
+	position: fixed;
+    z-index: 1;
+    margin-left: 1350px;
+
+}
+/*menuコンテンツ*/
+.cp_fullscreenmenu .menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	visibility: hidden;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	outline: 1px solid transparent;
+	align-items: center;
+	justify-content: center;
+}
+.cp_fullscreenmenu .menu > div {
+	display: flex;
+	overflow: hidden;
+	width: 200vw;
+	height: 200vw;
+	transition: all 0.2s ease;
+	text-align: center;
+	color: #fefefe;
+	border-radius: 50%;
+	background: rgba(0,131,143 ,0.8);
+	flex: none;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	align-items: center;
+	justify-content: center;
+}
+.cp_fullscreenmenu .menu > div > ul {
+    display: block;
+	max-height: 100vh;
+	margin: 0;
+	padding: 0 1em;
+	list-style: none;
+	transition: opacity 0.4s ease;
+	opacity: 0;
+}
+.cp_fullscreenmenu .menu > div > ul > li {
+	font-size: 24px;
+	display: block;
+	margin: 1em;
+	padding: 0;
+}
+.cp_fullscreenmenu .menu > div > ul > li > a {
+	position: relative;
+
+
+}
+.cp_fullscreenmenu .menu > div > ul > li > a:hover {
+	color: #e5e5e5;
+}
+.cp_fullscreenmenu .menu > div > ul > li > a:hover:after {
+	width: 100%;
+}
+
+/*クリックしたらメニューが開閉の動作*/
+.cp_fullscreenmenu .toggle {
+	position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    color: white;
+	width: 50px;
+	height: 50px;
+	opacity: 0;
+}
+.cp_fullscreenmenu .toggle:checked + .hamburger > span {
+	-webkit-transform: rotate(135deg);
+	        transform: rotate(135deg);
+}
+.cp_fullscreenmenu .toggle:checked + .hamburger > span:before,
+.cp_fullscreenmenu .toggle:checked + .hamburger > span:after {
+	top: 0;
+	-webkit-transform: rotate(90deg);
+	        transform: rotate(90deg);
+}
+.cp_fullscreenmenu .toggle:checked + .hamburger > span:after {
+	opacity: 0;
+}
+.cp_fullscreenmenu .toggle:checked ~ .menu {
+	visibility: visible;
+	pointer-events: auto;
+}
+.cp_fullscreenmenu .toggle:checked ~ .menu > div {
+	transition-duration: 1s;
+	-webkit-transform: scale(1);
+	        transform: scale(1);
+}
+.cp_fullscreenmenu .toggle:checked ~ .menu > div > ul {
+	opacity: 1;
+}
+
+
+
+/*ハンバーガー*/
+.cp_fullscreenmenu .hamburger {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    
+	width: 60px;
+	height: 60px;
+	padding: 0.5em 1em;
+	border-radius: 50%;
+	background: rgba(0,151,167 ,0.7);
+
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+}
+.cp_fullscreenmenu .hamburger > span {
+	position: relative;
+	top: 50%;
+	display: block;
+	width: 100%;
+	height: 2px;
+	transition: all 0.4s ease;
+	background: #fefefe;
+}
+.cp_fullscreenmenu .hamburger > span:before,
+.cp_fullscreenmenu .hamburger > span:after {
+	position: absolute;
+	z-index: 1;
+	top: -10px;
+	left: 0;
+	
+	width: 100%;
+	height: 2px;
+	content: '';
+	transition: all 0.4s ease;
+	background: inherit;
+}
+.cp_fullscreenmenu .hamburger > span:after {
+	top: 10px;
+}
+
+/* logo */
+.header{
+
+    height:40px;
+}
+
+.lgmark{
+    width: 50px;
+    height: 60px;
+    margin-left: 100px;
+    float: left;
+
+}
+.name{
+    float: left;
+    margin-left:10px ;
+
+}
+
+/* nav */
+.right{
+
+    float: right;
+    margin: 10px 200px 10px 0px;
+  }
+.nav{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    text-align: right;
+}
+
+.nav li{
+list-style-type: none;
+display: block;
+text-align: center;
+}
+
+.nav li+ li {
+border-left: 1px solid #707070;
+padding-left:30px;
+}
+
+.nav li:first-child{
+padding-right:30px;
+}
+
+a{
+    text-decoration: none;
+    color: #7F7F7F;
+
+}
+
+
+.ggi{
+    width: 323px;
+    
+}
+
+.iph{
+    width: 290px;
+   
+    margin-top: 20px;
+}
+
+/* img */
+
+.img{
+
+    /* background-color: #43B9A8; */
+    background-color: #43B9A8;
+    display: flex;
+	width: 100%;
+
+
+}
+
+.copy{
+	position: absolute;
+	margin-top: 200px;
+	color: rgb(226, 226, 226);
+	margin-left: 40px;
+
+}
+.img>ul{
+    list-style: none;
+    display: flex;
+	flex-direction: row;
+	margin-left: 0px;
+
+
+  
+}
+.img>ul>li{
+    margin-top: 350px;
+    /* border: blue 1px solid; */
+}
+
+
+
+.iphone{
+    /* border: red solid 1px; */
+    width: 480px;
+    height:600px;
+    margin-left: 200px;
+    margin-top: 20px;
+}
+
+.down{
+    background-color: #74C9BD;
+    text-align: center;
+    padding: 20px; 
+}
+
+.flowbox{
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin-left:350px ;
+    justify-content: space-around;
+    
+}
+
+.load{
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.load>p{
+    margin-top: 100px;
+}
+.load>img{
+    width: 300px;
+    height: 200px;
+    margin-left: 100px;
+
+    
+}
+.phote{
+    margin-top: 20px;
+
+}
+/* app */
+
+.app{
+
+    background-color: #74C9BD ;
+    text-align: center;
+    padding: 30px;
+}
+
+.app>p{
+    margin-top: 70px;
+}
+
+
+.app img{
+    width: 300px;
+    height: 300px;
+    margin-top: 40px;
+
+}
+/* fin */
+
+.fin{
+    background-color: #43B9A8;
+    text-align: center;
+    color: white;
+    padding: 10px;
+
+}
+.fin>p{
+    margin: 0;
+}
